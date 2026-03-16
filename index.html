@@ -1,1 +1,53 @@
-<!doctypehtml><html><head><meta charset=utf-8><title>Змейка</title><style>body{margin:0;padding:0;background-color:#000;display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden}canvas{outline:0;display:block}canvas:focus{outline:2px solid blue}</style></head><body><canvas height=600 id=canvas tabindex=0 width=800></canvas><script>window.addEventListener("load",(function(){const e=document.getElementById("canvas");e.focus(),e.addEventListener("click",(function(){e.focus()}))}));var Module={canvas:document.getElementById("canvas")};Module.canvas||(Module.canvas=document.createElement("canvas"),Module.canvas.id="canvas",Module.canvas.width=800,Module.canvas.height=600,Module.canvas.setAttribute("tabindex","0"),document.body.appendChild(Module.canvas))</script><script async src=index.js></script></body></html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Змейка</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      canvas {
+        outline: 0;
+        display: block;
+      }
+      canvas:focus {
+        outline: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas height="600" id="canvas" tabindex="0" width="800"></canvas>
+    <script>
+      window.addEventListener("load", function () {
+        const e = document.getElementById("canvas");
+        (e.focus(),
+          e.addEventListener("click", function () {
+            e.focus();
+          }));
+      });
+      var Module = { canvas: document.getElementById("canvas") };
+      Module.canvas ||
+        ((Module.canvas = document.createElement("canvas")),
+        (Module.canvas.id = "canvas"),
+        (Module.canvas.width = 800),
+        (Module.canvas.height = 600),
+        Module.canvas.setAttribute("tabindex", "0"),
+        document.body.appendChild(Module.canvas));
+    </script>
+    <script async src="index.js"></script>
+    <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Конец кода аналитики -->
+  </body>
+</html>
